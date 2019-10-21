@@ -3,23 +3,41 @@ Explicação de cada variavel segundo o artigo: http://www.cs.uu.nl/docs/vakken/
 
 1  - classe alvo('A', 'B', ... ,'Z')(Letras de diferentes fontes)
 2  - A posição horizontal do centro da menor caixa retangular(box)
-     que pode ser desenhado com todos os pixels "acesos" dentro da 
+     que pode ser desenhado com todos os pixels "ativados" dentro da 
      caixa.
 3  - A posição vertical, contando pixels da parte inferior
 4  - Largura, em pixels, da classe
 5  - Altura, em pixels, da caixa
-6  - Número total de pixels "acesos"
-7  - Posição horizontal média de todos os pixels "acesos", em relação
+6  - Número total de pixels "ativados"
+7  - Posição horizontal média de todos os pixels "ativados", em relação
      ao centro da caixa e dividida pela largura da caixa.
-8  - Posição verticial média de todos os pixels "acesos", em relação
+8  - Posição verticial média de todos os pixels "ativados", em relação
      ao centro da caixa dividido pela altura
 9  - Valor de mean squared das distância dos pixels horizontal,
      variavel7**2?
 10 - Valor de mean squared das distância dos pixels vertifical,
      variavel8**2?
-11 - ...
-12 - ...
-13 - ...
-14 - ...
-15 - ...
-16 - ...
+11 - O produto médio das distâncias horizontais e verticais para cada 
+     pixel "ligado", conforme medido em 7 e 8 acima. Este atributo possui
+     um valor positivo para linhas diagonais que vão do canto inferior 
+     esquerdo para o canto superior direito e um valor negativo para 
+     linhas diagonais do canto superior esquerdo para o canto inferior 
+     direito.
+12 - O valor médio da distância horizontal ao quadrado vezes a distância 
+     vertical para cada pixel "ligado". Isso mede a correlação da variação
+     horizontal com a posição vertical
+13 - O valor médio da distância vertical ao quadrado vezes a distância
+     horizontal para cada pixel "ligado". Mede a correlação da variação
+     vertical com a posição horizontal
+14 - O número médio de arestas (um pixel "ativado" imediatamente à direita
+     de um pixel "desativado" ou o limite da imagem) encontrado ao fazer
+     verificações sistemáticas da esquerda para a direita em todas as posições
+     verticais na caixa. Essa medida distingue entre letras como "W" ou "M" e 
+     letras como 'T' ou "L."
+15 - A soma das posições verticais das arestas encontradas, conforme medido em
+     13 acima. Esse recurso fornecerá um valor mais alto se houver mais bordas
+     na parte superior da caixa, como na letra "Y".
+16 - O número médio de bordas (um pixel "ligado" imediatamente acima de um pixel 
+     "desligado" ou o limite da imagem) encontrado ao fazer varreduras sistemáticas
+     da imagem de baixo para cima em todas as posições horizontais na caixa. 
+17 - A soma das posições horizontais das arestas encontradas, medida em 15 acima
