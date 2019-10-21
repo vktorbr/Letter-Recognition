@@ -1,0 +1,25 @@
+Explicação de cada variavel segundo o artigo: http://www.cs.uu.nl/docs/vakken/mpr/Frey-Slate.pdf
+
+
+1  - classe alvo('A', 'B', ... ,'Z')(Letras de diferentes fontes)
+2  - A posição horizontal do centro da menor caixa retangular(box)
+     que pode ser desenhado com todos os pixels "acesos" dentro da 
+     caixa.
+3  - A posição vertical, contando pixels da parte inferior
+4  - Largura, em pixels, da classe
+5  - Altura, em pixels, da caixa
+6  - Número total de pixels "acesos"
+7  - Posição horizontal média de todos os pixels "acesos", em relação
+     ao centro da caixa e dividida pela largura da caixa.
+8  - Posição verticial média de todos os pixels "acesos", em relação
+     ao centro da caixa dividido pela altura
+9  - Valor de mean squared das distância dos pixels horizontal,
+     variavel7**2?
+10 - Valor de mean squared das distância dos pixels vertifical,
+     variavel8**2?
+11 - ...
+12 - ...
+13 - ...
+14 - ...
+15 - ...
+16 - ...
